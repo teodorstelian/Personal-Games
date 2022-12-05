@@ -15,18 +15,12 @@ class Machine:
 
     def generate_lines(self):
 
+        self.squares = []
         self.generate_squares()
         squares = self.squares
 
-        print()
-
-        print("|", squares[0], "|", squares[1], "|", squares[2], "|")
-        print("--------------")
-
-        print("|", squares[3], "|", squares[4], "|", squares[5], "|")
-        print("--------------")
-
-        print("|", squares[6], "|", squares[7], "|", squares[8], "|")
-        print()
+        for row in range(3):
+            print("|", squares[3*row], "|", squares[3*row+1], "|", squares[3*row+2], "|")
+            print("--------------")
 
         return squares
